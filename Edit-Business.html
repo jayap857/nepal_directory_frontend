@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Business - Nepal Directory</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-mountain text-warning me-2"></i>
+        Nepal Directory
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link active" href="edit-business.html">Edit Business</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Edit Business Form -->
+  <section class="container py-5 mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0 p-4">
+          <h3 class="fw-bold mb-4 text-primary">
+            <i class="fas fa-edit me-2"></i>Edit Business
+          </h3>
+
+          <form id="editBusinessForm">
+            <!-- Business Name -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Business Name</label>
+              <input type="text" class="form-control" value="Everest Cafe" required>
+            </div>
+
+            <!-- Category -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Category</label>
+              <select class="form-select">
+                <option selected>Restaurant</option>
+                <option>Hotel</option>
+                <option>Shop</option>
+                <option>IT Services</option>
+              </select>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Description</label>
+              <textarea class="form-control" rows="4">A cozy cafe offering Nepali and international cuisine.</textarea>
+            </div>
+
+            <!-- Address -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Address</label>
+              <input type="text" class="form-control" value="Thamel, Kathmandu">
+            </div>
+
+            <!-- Contact -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Phone</label>
+                <input type="text" class="form-control" value="+977-9812345678">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" value="info@everestcafe.com">
+              </div>
+            </div>
+
+            <!-- Website -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Website</label>
+              <input type="url" class="form-control" value="https://everestcafe.com">
+            </div>
+
+            <!-- Business Hours -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Business Hours</label>
+              <table class="table table-bordered text-center">
+                <thead class="table-light">
+                  <tr>
+                    <th>Day</th>
+                    <th>Open</th>
+                    <th>Close</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monday</td>
+                    <td><input type="time" class="form-control" value="09:00"></td>
+                    <td><input type="time" class="form-control" value="21:00"></td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td><input type="time" class="form-control" value="09:00"></td>
+                    <td><input type="time" class="form-control" value="21:00"></td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td><input type="time" class="form-control" value="09:00"></td>
+                    <td><input type="time" class="form-control" value="21:00"></td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                    <td><input type="time" class="form-control" value="09:00"></td>
+                    <td><input type="time" class="form-control" value="21:00"></td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td><input type="time" class="form-control" value="09:00"></td>
+                    <td><input type="time" class="form-control" value="23:00"></td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td><input type="time" class="form-control" value="10:00"></td>
+                    <td><input type="time" class="form-control" value="23:00"></td>
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td><input type="time" class="form-control" value="Closed"></td>
+                    <td><input type="time" class="form-control" value="Closed"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Image Management -->
+            <div class="mb-3">
+              <label class="form-label fw-bold">Images</label>
+              <div class="d-flex flex-wrap gap-3 mb-3" id="imageGallery">
+                <div class="position-relative">
+                  <img src="images/cafe1.jpg" class="img-thumbnail" width="120">
+                  <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+                <div class="position-relative">
+                  <img src="images/cafe2.jpg" class="img-thumbnail" width="120">
+                  <button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <input type="file" class="form-control" multiple>
+            </div>
+
+            <!-- Submit -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-save me-2"></i>Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="text-white-50 mb-0">&copy; 2025 Nepal Directory. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

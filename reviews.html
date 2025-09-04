@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Nepal Business Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-mountain text-warning me-2"></i>
+                Nepal Directory
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reviews.html">Reviews</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="authNav">
+                    <!-- Will be populated by JavaScript based on auth state -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold text-primary mb-3">Customer Reviews</h1>
+                    <p class="lead text-muted">See what customers are saying about local businesses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="filter-sidebar bg-white p-4 rounded-lg shadow">
+                        <h5 class="fw-bold mb-3">Filter Reviews</h5>
+                        
+                        <div class="filter-group mb-4">
+                            <h6 class="fw-semibold mb-2">Rating</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="filterRating5" value="5">
+                                <label class="form-check-label" for="filterRating5">
+                                    <span class="stars">★★★★★</span> 5 Stars
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="filterRating4" value="4">
+                                <label class="form-check-label" for="filterRating4">
+                                    <span class="stars">★★★★☆</span> 4 Stars
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="filterRating3" value="3">
+                                <label class="form-check-label" for="filterRating3">
+                                    <span class="stars">★★★☆☆</span> 3 Stars
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="filterRating2" value="2">
+                                <label class="form-check-label" for="filterRating2">
+                                    <span class="stars">★★☆☆☆</span> 2 Stars
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="filterRating1" value="1">
+                                <label class="form-check-label" for="filterRating1">
+                                    <span class="stars">★☆☆☆☆</span> 1 Star
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group mb-4">
+                            <h6 class="fw-semibold mb-2">Category</h6>
+                            <select class="form-select" id="filterCategory">
+                                <option value="">All Categories</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group mb-4">
+                            <h6 class="fw-semibold mb-2">Date Range</h6>
+                            <select class="form-select" id="filterDate">
+                                <option value="">All Time</option>
+                                <option value="week">Last Week</option>
+                                <option value="month">Last Month</option>
+                                <option value="3months">Last 3 Months</option>
+                                <option value="year">Last Year</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mb-2" onclick="applyReviewFilters()">Apply Filters</button>
+                        <button class="btn btn-outline-secondary w-100" onclick="clearReviewFilters()">Clear All</button>
+                    </div>
+                </div>
+
+                <!-- Reviews Content -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h4 class="fw-bold mb-1">All Reviews</h4>
+                            <p class="text-muted mb-0" id="reviewsCount">Loading...</p>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Sort By
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="sortReviews('newest')">Newest First</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="sortReviews('oldest')">Oldest First</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="sortReviews('highest')">Highest Rating</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="sortReviews('lowest')">Lowest Rating</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Grid -->
+                    <div id="reviewsGrid" class="row g-4">
+                        <!-- Reviews will be loaded here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Reviews pagination" class="mt-5">
+                        <ul class="pagination justify-content-center" id="reviewsPagination">
+                            <!-- Pagination will be generated by JavaScript -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Detail Modal -->
+    <div class="modal fade" id="reviewDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Review Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="reviewDetailContent">
+                    <!-- Review details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="reportReview()">
+                        <i class="fas fa-flag me-2"></i>Report Review
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="auth.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>

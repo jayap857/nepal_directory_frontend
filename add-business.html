@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Business - Nepal Business Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-mountain text-warning me-2"></i>
+                Nepal Directory
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="add-business.html">
+                            <i class="fas fa-plus me-1"></i>Add Business
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold text-primary mb-3">Add Your Business</h1>
+                    <p class="lead text-muted">Join Nepal's premier business directory</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Business Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-white p-5 rounded-lg shadow">
+                        <form id="addBusinessForm" novalidate>
+                            <!-- Basic Information -->
+                            <div class="section-header mb-4">
+                                <h4 class="fw-bold text-primary mb-2">Basic Information</h4>
+                                <hr>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="businessName" class="form-label fw-semibold">Business Name *</label>
+                                    <input type="text" class="form-control" id="businessName" required>
+                                    <div class="invalid-feedback">Please provide a business name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="businessCategory" class="form-label fw-semibold">Category *</label>
+                                    <select class="form-select" id="businessCategory" required>
+                                        <option value="">Select Category</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a category.</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="businessDescription" class="form-label fw-semibold">Description *</label>
+                                <textarea class="form-control" id="businessDescription" rows="4" required placeholder="Describe your business, services, and what makes you unique..."></textarea>
+                                <div class="invalid-feedback">Please provide a business description.</div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="section-header mb-4">
+                                <h4 class="fw-bold text-primary mb-2">Contact Information</h4>
+                                <hr>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="businessPhone" class="form-label fw-semibold">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="businessPhone" required>
+                                    <div class="invalid-feedback">Please provide a phone number.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="businessEmail" class="form-label fw-semibold">Email</label>
+                                    <input type="email" class="form-control" id="businessEmail">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="businessWebsite" class="form-label fw-semibold">Website</label>
+                                <input type="url" class="form-control" id="businessWebsite" placeholder="https://example.com">
+                            </div>
+
+                            <!-- Location -->
+                            <div class="section-header mb-4">
+                                <h4 class="fw-bold text-primary mb-2">Location</h4>
+                                <hr>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="businessCity" class="form-label fw-semibold">City *</label>
+                                    <select class="form-select" id="businessCity" required>
+                                        <option value="">Select City</option>
+                                        <option value="Kathmandu">Kathmandu</option>
+                                        <option value="Pokhara">Pokhara</option>
+                                        <option value="Chitwan">Chitwan</option>
+                                        <option value="Biratnagar">Biratnagar</option>
+                                        <option value="Birgunj">Birgunj</option>
+                                        <option value="Dharan">Dharan</option>
+                                        <option value="Butwal">Butwal</option>
+                                        <option value="Nepalgunj">Nepalgunj</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a city.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="businessArea" class="form-label fw-semibold">Area/District</label>
+                                    <input type="text" class="form-control" id="businessArea" placeholder="e.g., Thamel, Lakeside">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="businessAddress" class="form-label fw-semibold">Full Address *</label>
+                                <textarea class="form-control" id="businessAddress" rows="2" required placeholder="Street address, landmarks, etc."></textarea>
+                                <div class="invalid-feedback">Please provide the business address.</div>
+                            </div>
+
+                            <!-- Business Hours -->
+                            <div class="section-header mb-4">
+                                <h4 class="fw-bold text-primary mb-2">Business Hours</h4>
+                                <hr>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="openTime" class="form-label fw-semibold">Opening Time</label>
+                                    <input type="time" class="form-control" id="openTime">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="closeTime" class="form-label fw-semibold">Closing Time</label>
+                                    <input type="time" class="form-control" id="closeTime">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Operating Days</label>
+                                <div class="row">
+                                    <div class="col-md-4 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="monday" value="Monday">
+                                            <label class="form-check-label" for="monday">Monday</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="tuesday" value="Tuesday">
+                                            <label class="form-check-label" for="tuesday">Tuesday</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="wednesday" value="Wednesday">
+                                            <label class="form-check-label" for="wednesday">Wednesday</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="thursday" value="Thursday">
+                                            <label class="form-check-label" for="thursday">Thursday</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="friday" value="Friday">
+                                            <label class="form-check-label" for="friday">Friday</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="saturday" value="Saturday">
+                                            <label class="form-check-label" for="saturday">Saturday</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sunday" value="Sunday">
+                                            <label class="form-check-label" for="sunday">Sunday</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="section-header mb-4">
+                                <h4 class="fw-bold text-primary mb-2">Additional Information</h4>
+                                <hr>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="businessServices" class="form-label fw-semibold">Services/Products</label>
+                                <textarea class="form-control" id="businessServices" rows="3" placeholder="List your main services or products..."></textarea>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="businessFacebook" class="form-label fw-semibold">Facebook Page</label>
+                                    <input type="url" class="form-control" id="businessFacebook" placeholder="https://facebook.com/yourpage">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="businessInstagram" class="form-label fw-semibold">Instagram</label>
+                                    <input type="text" class="form-control" id="businessInstagram" placeholder="@yourbusiness">
+                                </div>
+                            </div>
+
+                            <!-- Form Actions -->
+                            <div class="d-flex gap-3 pt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-check me-2"></i>Submit Business
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg" onclick="resetForm()">
+                                    <i class="fas fa-undo me-2"></i>Reset Form
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="fas fa-check-circle me-2"></i>Success!
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="mb-3">Your business has been successfully submitted!</p>
+                    <p class="text-muted">It will be reviewed and published within 24 hours.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="add-business.js"></script>
+</body>
+</html>
+
