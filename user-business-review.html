@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Business Review - Nepal Directory</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-mountain text-warning me-2"></i> Nepal Directory
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-light text-center mt-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold text-primary mb-3">Submit a Business Review</h1>
+      <p class="lead text-muted">Help others by sharing your experience and rating local businesses</p>
+    </div>
+  </section>
+
+  <!-- Submit Review Form -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0 p-4 mb-5">
+            <h4 class="fw-bold mb-3 text-primary"><i class="fas fa-star me-2"></i>Write Your Review</h4>
+            <form id="userReviewForm">
+              <div class="mb-3">
+                <label class="form-label fw-bold">Your Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Select Business</label>
+                <select class="form-select" id="businessSelect" required>
+                  <!-- Options populated by JS -->
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Rating</label>
+                <select class="form-select" id="ratingSelect" required>
+                  <option value="">Select rating</option>
+                  <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                  <option value="4">⭐⭐⭐⭐ Good</option>
+                  <option value="3">⭐⭐⭐ Average</option>
+                  <option value="2">⭐⭐ Poor</option>
+                  <option value="1">⭐ Terrible</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Review</label>
+                <textarea class="form-control" id="reviewText" rows="4" placeholder="Write your review here..." required></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Upload Images (Optional)</label>
+                <input type="file" class="form-control" id="reviewImages" multiple>
+                <small class="text-muted">You can upload multiple images.</small>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fas fa-paper-plane me-2"></i>Submit Review
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Display -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-primary mb-4">Recent Reviews</h2>
+      <div class="row g-4" id="reviewsContainer">
+        <!-- Reviews will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container text-center">
+      <p class="text-white-50 mb-0">&copy; 2025 Nepal Directory. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="user-business-review.js"></script>
+</body>
+</html>
+
