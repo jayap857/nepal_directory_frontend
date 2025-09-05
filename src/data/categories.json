@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Restaurants",
+    "description": "Local dining and food services",
+    "icon": "utensils",
+    "color": "#DC2626",
+    "count": 245,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Hotels & Lodging",
+    "description": "Accommodation and hospitality",
+    "icon": "bed",
+    "color": "#1E40AF",
+    "count": 156,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Shopping",
+    "description": "Retail stores and markets",
+    "icon": "shopping-bag",
+    "color": "#059669",
+    "count": 189,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "Healthcare",
+    "description": "Medical and health services",
+    "icon": "heart-pulse",
+    "color": "#DC2626",
+    "count": 98,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "name": "Education",
+    "description": "Schools and training centers",
+    "icon": "graduation-cap",
+    "color": "#7C3AED",
+    "count": 134,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "Transportation",
+    "description": "Travel and transport services",
+    "icon": "car",
+    "color": "#F59E0B",
+    "count": 87,
+    "featured": false
+  },
+  {
+    "id": 7,
+    "name": "IT Services",
+    "description": "Technology and digital services",
+    "icon": "laptop",
+    "color": "#06B6D4",
+    "count": 76,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "Beauty & Wellness",
+    "description": "Salons and spa services",
+    "icon": "sparkles",
+    "color": "#EC4899",
+    "count": 65,
+    "featured": false
+  }
+]

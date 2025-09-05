@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Everest View Restaurant",
+    "description": "Authentic Nepali cuisine with stunning mountain views. Experience traditional flavors in a modern setting with panoramic views of the Himalayas.",
+    "category": "Restaurants",
+    "categoryId": 1,
+    "rating": 4.8,
+    "reviewCount": 127,
+    "image": "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg",
+    "phone": "+977-1-4567890",
+    "email": "info@everestview.com",
+    "website": "https://everestview.com",
+    "address": "Thamel, Kathmandu 44600",
+    "city": "Kathmandu",
+    "area": "Thamel",
+    "featured": true,
+    "verified": true,
+    "hours": {
+      "open": "09:00",
+      "close": "22:00",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "services": ["Dine-in", "Takeaway", "Home Delivery", "Catering"],
+    "amenities": ["WiFi", "Parking", "AC", "Card Payment"],
+    "priceRange": "$$",
+    "coordinates": {
+      "lat": 27.7172,
+      "lng": 85.3240
+    }
+  },
+  {
+    "id": 2,
+    "name": "Himalayan Grand Hotel",
+    "description": "Luxury accommodation in the heart of Kathmandu. Modern amenities with traditional Nepali hospitality and world-class service.",
+    "category": "Hotels & Lodging",
+    "categoryId": 2,
+    "rating": 4.6,
+    "reviewCount": 89,
+    "image": "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+    "phone": "+977-1-4567891",
+    "email": "reservations@himalayangrand.com",
+    "website": "https://himalayangrand.com",
+    "address": "Durbar Marg, Kathmandu 44600",
+    "city": "Kathmandu",
+    "area": "Durbar Marg",
+    "featured": true,
+    "verified": true,
+    "hours": {
+      "open": "24/7",
+      "close": "24/7",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "services": ["Room Service", "Concierge", "Airport Transfer", "Conference Rooms"],
+    "amenities": ["WiFi", "Parking", "Pool", "Gym", "Spa", "Restaurant"],
+    "priceRange": "$$$",
+    "coordinates": {
+      "lat": 27.7024,
+      "lng": 85.3157
+    }
+  },
+  {
+    "id": 3,
+    "name": "Pokhara Tech Solutions",
+    "description": "Leading IT services provider in Pokhara. Specializing in web development, mobile apps, and digital marketing solutions for businesses.",
+    "category": "IT Services",
+    "categoryId": 7,
+    "rating": 4.9,
+    "reviewCount": 45,
+    "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    "phone": "+977-61-567890",
+    "email": "hello@pokharatech.com",
+    "website": "https://pokharatech.com",
+    "address": "Lakeside, Pokhara 33700",
+    "city": "Pokhara",
+    "area": "Lakeside",
+    "featured": true,
+    "verified": true,
+    "hours": {
+      "open": "09:00",
+      "close": "18:00",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    },
+    "services": ["Web Development", "Mobile Apps", "Digital Marketing", "IT Consulting"],
+    "amenities": ["WiFi", "Parking", "Meeting Rooms"],
+    "priceRange": "$$",
+    "coordinates": {
+      "lat": 28.2096,
+      "lng": 83.9856
+    }
+  },
+  {
+    "id": 4,
+    "name": "Chitwan Medical Center",
+    "description": "Comprehensive healthcare facility serving the Chitwan region. Modern medical equipment and experienced doctors providing quality healthcare.",
+    "category": "Healthcare",
+    "categoryId": 4,
+    "rating": 4.7,
+    "reviewCount": 156,
+    "image": "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg",
+    "phone": "+977-56-567890",
+    "email": "info@chitwanmedical.com",
+    "website": "https://chitwanmedical.com",
+    "address": "Bharatpur, Chitwan 44200",
+    "city": "Chitwan",
+    "area": "Bharatpur",
+    "featured": false,
+    "verified": true,
+    "hours": {
+      "open": "24/7",
+      "close": "24/7",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "services": ["Emergency Care", "General Medicine", "Surgery", "Diagnostics"],
+    "amenities": ["Parking", "Pharmacy", "Lab", "Emergency"],
+    "priceRange": "$$",
+    "coordinates": {
+      "lat": 27.6918,
+      "lng": 84.4359
+    }
+  },
+  {
+    "id": 5,
+    "name": "Kathmandu Fashion Plaza",
+    "description": "Premier shopping destination for fashion and lifestyle products. Wide range of local and international brands under one roof.",
+    "category": "Shopping",
+    "categoryId": 3,
+    "rating": 4.3,
+    "reviewCount": 203,
+    "image": "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg",
+    "phone": "+977-1-4567892",
+    "email": "info@ktmfashion.com",
+    "website": "https://ktmfashion.com",
+    "address": "New Road, Kathmandu 44600",
+    "city": "Kathmandu",
+    "area": "New Road",
+    "featured": false,
+    "verified": true,
+    "hours": {
+      "open": "10:00",
+      "close": "20:00",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "services": ["Retail", "Personal Shopping", "Gift Wrapping", "Home Delivery"],
+    "amenities": ["WiFi", "Parking", "AC", "Food Court", "ATM"],
+    "priceRange": "$$",
+    "coordinates": {
+      "lat": 27.7024,
+      "lng": 85.3157
+    }
+  }
+]
